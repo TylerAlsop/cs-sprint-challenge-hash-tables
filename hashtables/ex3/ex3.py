@@ -3,6 +3,17 @@ def intersection(arrays):
     YOUR CODE HERE
     """
     # Your code here
+    result = []
+    numbers_from_arrays = {}
+
+    for array in arrays:
+        for number in array:
+            if number not in numbers_from_arrays:
+                numbers_from_arrays[number] = None
+            else:
+                if number not in result:
+                    result.append(number)
+    print(result)
 
     return result
 
