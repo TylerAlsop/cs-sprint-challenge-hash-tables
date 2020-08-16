@@ -7,6 +7,14 @@ def finder(files, queries):
     YOUR CODE HERE
     """
     # Your code here
+    result = []
+
+    for file_path in files:
+        for query in queries:
+            if file_path.contains(query):
+                if file_path not in result:
+                    result.append(file_path)
+
 
     return result
 
