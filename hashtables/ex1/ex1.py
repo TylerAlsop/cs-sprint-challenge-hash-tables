@@ -15,22 +15,25 @@ def get_indices_of_item_weights(weights, length, limit):
 
     # P.
         # Create a hash table to store data.
-    weight_and_indices = {}        
+    weight_and_indices = {}
 
         # Use a for loop to loop over the "weights" list.
+            # For each item in the list we want to save the weight to the hash table as the key and the index number of that weight as the value.
     for weight in weights:
         # Create Varialbes for the indicies
-        index_num = weights[weight]
-        weight_and_indices.key = weight
-        weight_and_indices.value = index_num
-            # For each item in the list we want to save the weight to the hash table as the key and the index number of that weight as the value.
+        weight_index = weights.index(weight)
+        weight_and_indices[weight] = weight_index
+    
+    print(weight_and_indices)
+
         # Loop over the hash table to see if any of two keys add up to the weight limit.
+    
             # If that doesn't exist return NONE
             # Else return the values of the two keys.
         # Find the higher number and save it to the zeroth index in a tuple and the other number in the first index of the tuple.
         # Return the tuple.
-
-    print(weight_and_indices)
+    
 
     return weight_and_indices
 
+get_indices_of_item_weights([4, 5, 3, 8], 4, 12)
